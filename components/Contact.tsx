@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-16 bg-white dark:bg-gray-950 transition-colors duration-300">
-       {/* <Toaster position="top-right" /> */}
+       <Toaster position="top-right" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3">

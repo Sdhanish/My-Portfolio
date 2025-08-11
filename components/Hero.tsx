@@ -70,7 +70,7 @@ const Hero = () => {
                 alt="Logo"
                 width={120}
                 height={120}
-                className="rounded-full object-contain"
+                className="rounded-full object-contain h-auto"
               />
             </div>
 

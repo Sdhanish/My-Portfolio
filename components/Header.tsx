@@ -63,7 +63,7 @@ const Header = () => {
                 alt="Logo"
                 width={70}
                 height={30}
-                className="rounded-full object-cover"
+                className="rounded-full object-cover h-auto"
               />
             </motion.div>
 

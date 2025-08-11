@@ -59,7 +59,7 @@ const Education = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full  bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hidden lg:block"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full  bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
 
           {/* Timeline Items */}
           <div className="space-y-12">
@@ -85,7 +85,7 @@ const Education = () => {
                   } sm:flex-row`}
                 >
                   {/* Circle Icon */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 z-10 hidden lg:block">
+                  <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                     <motion.div
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
