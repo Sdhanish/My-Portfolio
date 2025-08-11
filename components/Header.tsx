@@ -10,7 +10,12 @@ import { useTheme } from 'next-themes';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme } = useTheme();
+   const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +40,13 @@ const Header = () => {
       setIsMobileMenuOpen(false);
     }
   };
+
+   if (!mounted) {
+    // Render a simple transparent header or a placeholder while theme loads
+    return (
+      <header className="fixed top-0 left-0 w-full z-50 py-4 bg-transparent" />
+    );
+  }
 
   return (
     <>
