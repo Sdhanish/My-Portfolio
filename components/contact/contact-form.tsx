@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import toast from "react-hot-toast";
-import { sendContactEmail } from "@/app/actions/sendContactEmail";
+import { sendContactEmail } from "@/actions/sendContactEmail";
 import { Send } from "lucide-react";
 
 
