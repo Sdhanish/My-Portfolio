@@ -1,22 +1,14 @@
 'use client';
 
 import React from 'react';
-import { ArrowUp, ArrowUpToLine, Heart } from 'lucide-react';
+import { ArrowUp, Heart } from 'lucide-react';
 import Image from 'next/image';
+import { quickLinks } from '@/data/utilsData';
 
-interface QuickLink {
-  name: string;
-  href: string;
-}
+
 
 const Footer = () => {
-  const quickLinks: QuickLink[] = [
-    { name: 'About', href: '#about' },
-    { name: 'Education', href: '#education' },
-    { name: 'Services', href: '#services' },
-    { name: 'Works', href: '#works' },
-    { name: 'Contact', href: '#contact' },
-  ];
+
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -30,7 +22,7 @@ const Footer = () => {
   };
   return (
     <footer className="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 text-white py-10 transition-colors duration-300">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Logo and Description */}
           <div>
@@ -96,11 +88,11 @@ const Footer = () => {
             {/* Centered Copyright */}
             <div className="flex-1 flex justify-center">
               <div className="flex items-center space-x-2 text-gray-300 dark:text-gray-400 text-sm">
-                <span>© {new Date().getFullYear()} Dhanish S. Made with</span>
+                <span>© {new Date().getFullYear()}Dhanish S. Made with</span>
                 <div className="animate-pulse">
                   <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
                 </div>
-                <span>and lots of ☕</span>
+                <span>sdhanish92@gmail.com</span>
               </div>
             </div>
 

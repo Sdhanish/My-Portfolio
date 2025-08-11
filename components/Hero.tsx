@@ -6,45 +6,21 @@ import { ArrowRight, Download } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { ReactTyped } from "react-typed";
+import { titles } from '@/data/utilsData';
+import { handleDownloadCV, scrollToSection } from '@/utils/utilData';
 
 
 const Hero = () => {
   const { theme } = useTheme();
 
-  const titles = [
-    'Full Stack Developer',
-    'MERN Stack Developer',
-    'Frontend Developer', 
-    'Backend Developer',
-    'React.js Developer',
-    'Web Designer',
-    'Web Developer',
-    'Freelancer'
-  ];
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/resume/DHANISH S Resume Full Stack Developer.pdf';
-    link.download = 'DHANISH S Resume Full Stack Developer.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
-    <section
+    <section id='hero'
       className="
         min-h-screen flex items-center justify-center
         bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50
         dark:from-gray-900 dark:via-gray-800 dark:to-black
-        relative overflow-hidden py-10
+        relative overflow-hidden px-5
       "
     >
       {/* Background Animation */}
@@ -75,7 +51,7 @@ const Hero = () => {
             </div>
 
             {/* React Icon - Top Right */}
-            <motion.div
+            {/* <motion.div
               animate={{ y: [-8, 8, -8] }}
               transition={{ duration: 3, repeat: Infinity }}
               className="absolute -top-2 -right-2 w-12 h-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg flex items-center justify-center border-2 border-blue-400"
@@ -87,7 +63,7 @@ const Hero = () => {
                 height={40}
                 className="object-cover rounded-full"
               />
-            </motion.div>
+            </motion.div> */}
 
             {/* Node.js Icon - Bottom Left */}
             <motion.div
@@ -135,9 +111,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+          className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto text-justify"
         >
-          Building responsive full-stack applications with MERN stack & AI integration. 
+          Building a responsive full-stack applications with MERN stack & AI integration. 
           Creating digital experiences that make a difference.
         </motion.p>
 
@@ -152,7 +128,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('#works')}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300 justify-center"
           >
             View My Work
             <ArrowRight className="ml-2 " />
@@ -162,7 +138,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleDownloadCV}
-            className="inline-flex items-center px-6 py-3 border-2 border-portfolio-primary text-portfolio-primary font-medium rounded-lg hover:bg-portfolio-primary hover:text-white transition-all duration-300"
+            className="inline-flex items-center px-6 py-3 border-2 border-portfolio-primary text-portfolio-primary font-medium rounded-lg hover:bg-portfolio-primary hover:text-white transition-all duration-300 justify-center"
           >
             Download CV
             <Download className="ml-2 " />

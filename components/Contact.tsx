@@ -1,79 +1,12 @@
-'use client'; // If using App Router
+'use client'; 
 
-import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Linkedin, Github, Send, Instagram, Facebook } from 'lucide-react';
 import { motion } from "framer-motion";
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import ContactForm from './contact/contact-form';
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
-interface FormErrors {
-  name?: string;
-  email?: string;
-  message?: string;
-}
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({ name: '', email: '', message: '' });
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-
-    if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
-    }
-  };
-
-  const validateForm = (): FormErrors => {
-    const newErrors: FormErrors = {};
-    if (!formData.name || formData.name.length < 2) newErrors.name = 'Name must be at least 2 characters';
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email || !emailRegex.test(formData.email)) newErrors.email = 'Please enter a valid email address';
-    if (!formData.message || formData.message.length < 10) newErrors.message = 'Message must be at least 10 characters';
-    return newErrors;
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-
-    setIsSubmitting(true);
-    const loadingToast = toast.loading('Sending message...');
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      toast.dismiss(loadingToast);
-
-      if (res.ok) {
-        toast.success('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        toast.error('Failed to send message. Please try again.');
-      }
-    } catch (error) {
-      toast.dismiss(loadingToast);
-      toast.error('Something went wrong. Please try again.');
-    }
-
-    setIsSubmitting(false);
-  };
 
   const contactInfo = [
     {
@@ -96,7 +29,7 @@ const Contact: React.FC = () => {
     },
   ];
 
-  const socialLinks = [
+const socialLinks = [
     {
       icon: <Linkedin className="w-4 h-4" />,
       label: 'LinkedIn',
@@ -111,7 +44,7 @@ const Contact: React.FC = () => {
 
 
   return (
-    <section id="contact" className="py-16 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section id="contact" className="py-16 bg-white dark:bg-gray-950 transition-colors duration-300 px-5">
        <Toaster position="top-right" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">

@@ -117,7 +117,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-10 dark:bg-gray-950 dark:to-gray-900 transition-colors duration-300">
+    <section id="services" className=" dark:bg-gray-950 dark:to-gray-900 transition-colors duration-300 px-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

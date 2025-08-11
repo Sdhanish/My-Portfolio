@@ -3,42 +3,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
+import { educationData } from '@/data/utilsData';
 
 const Education = () => {
-  const educationData = [
-    {
-      title: 'Master of Computer Applications',
-      cgpa: '9.09',
-      duration: 'Sept 2023 – May 2025',
-      institution: 'APJ Abdul Kalam Technological University',
-      location: 'Kerala, India',
-      status: 'Completed',
-      type: 'degree',
-    },
-    {
-      title: 'MERN Stack Training',
-      duration: 'Nov 2022 – Jan 2023',
-      institution: 'Techmindz, Infopark Kochi',
-      location: 'Kochi, India',
-      status: 'Completed',
-      type: 'training',
-      description:
-        'Completed intensive MERN stack training. Built full-stack applications using React, Node.js, Express.js, and MongoDB; developed APIs, responsive UIs, and practiced deployment.',
-    },
-    {
-      title: 'Bachelor of Computer Applications',
-      cgpa: '7.17',
-      duration: 'Jun 2019 – Mar 2022',
-      institution: 'Mahatma Gandhi University',
-      location: 'Kerala, India',
-      status: 'Completed',
-      type: 'degree',
-    },
-  ];
+
 
   return (
     <section id="education" className="py-20 bg-white dark:bg-gray-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -59,7 +31,7 @@ const Education = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full  bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full  bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hidden lg:block"></div>
 
           {/* Timeline Items */}
           <div className="space-y-12">
@@ -94,7 +66,7 @@ const Education = () => {
                         delay: index * 0.2 + 0.3,
                       }}
                       viewport={{ once: true }}
-                      className="w-16 h-16  bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg"
+                      className="w-16 h-16  bg-gradient-to-r from-blue-400 to-blue-600 rounded-full items-center justify-center shadow-lg hidden lg:flex"
                     >
                       <Icon className="w-8 h-8 text-white" />
                     </motion.div>
