@@ -38,49 +38,27 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative flex justify-center mb-8"
         >
-          <div className="relative w-30 h-30">
-            {/* Logo with circular border */}
-            <div className="w-full h-full border-4 border-portfolio-primary/30 rounded-full p-4 flex items-center justify-center bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
-              <Image
-                src={theme === 'dark' ? '/dark-logo.png' : '/white-logo.png'}
-                alt="Logo"
-                width={120}
-                height={120}
-                className="rounded-full object-contain h-auto"
-              />
-            </div>
+         <div className="relative w-30 h-30">
+  {/* Light Logo - shows in light mode */}
+  <Image
+    src="/white-logo.png"
+    alt="Logo"
+    width={120}
+    height={120}
+    className="rounded-full object-contain h-auto block dark:hidden"
+  />
 
-            {/* React Icon - Top Right */}
-            {/* <motion.div
-              animate={{ y: [-8, 8, -8] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-2 -right-2 w-12 h-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg flex items-center justify-center border-2 border-blue-400"
-            >
-              <Image
-                src="/hero-section/react.png"
-                alt="react Logo"
-                width={40}
-                height={40}
-                className="object-cover rounded-full"
-              />
-            </motion.div> */}
+  {/* Dark Logo - shows in dark mode */}
+  <Image
+    src="/dark-logo.png"
+    alt="Logo"
+    width={120}
+    height={120}
+    className="rounded-full object-contain h-auto hidden dark:block"
+  />
+</div>
 
-            {/* Node.js Icon - Bottom Left */}
-            <motion.div
-              animate={{ y: [8, -8, 8] }}
-              transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-2 -left-2 w-12 h-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg flex items-center justify-center border-2 border-yellow-500"
-            >
-              <Image
-               
-                src="/hero-section/JavaScript-Symbol.png"
-                alt="js Logo"
-                width={60}
-                height={60}
-                className="object-contain rounded-full"
-              />
-            </motion.div>
-          </div>
+          
         </motion.div>
 
         {/* Text Section */}
