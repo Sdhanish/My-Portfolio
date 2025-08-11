@@ -97,7 +97,7 @@ const Hero = () => {
             >
               <Image
                
-                src="/hero-section/Javascript-Symbol.png"
+                src="/hero-section/JavaScript-Symbol.png"
                 alt="js Logo"
                 width={60}
                 height={60}
