@@ -14,7 +14,7 @@ const WhatsAppButton = () => {
                  bg-green-500 hover:bg-green-600 text-white 
                  p-3 md:p-4 rounded-full shadow-lg z-50 transition-all duration-300"
     >
-      <FaWhatsapp size={20} />
+      <FaWhatsapp size={24} />
     </motion.a>
   );
 };
