@@ -2,6 +2,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import WhatsAppButton from '@/components/whatspp/whatsapp';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -50,6 +51,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <WhatsAppButton/>
         </ThemeProvider>
       </body>
     </html>

@@ -3,8 +3,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { MapPin, Phone, Mail, Linkedin, Github, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Mail, Linkedin, Github, Instagram, Facebook, Download, MessageCircle } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { handleDownloadCV } from '@/utils/utilData';
+import WhatsAppButton from './whatspp/whatsapp';
+import WhatsAppChatLink from './whatspp/whatsapp-chat-link';
 
 const About = () => {
   const { theme } = useTheme();
@@ -81,10 +84,22 @@ const About = () => {
       environment. I believe in writing clean, maintainable code and creating
       exceptional user experiences.
     </p>
+    <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={handleDownloadCV}
+                className="inline-flex items-center px-6 py-3 border-2 border-portfolio-primary text-portfolio-primary font-medium rounded-lg hover:bg-portfolio-primary hover:text-white transition-all duration-300 justify-center"
+              >
+                Download CV
+                <Download className="ml-2" />
+              </motion.button>
+              
+              
+      
   </div>
 
   {/* Contact Information Row */}
-  <div className="flex flex-wrap justify-center items-center gap-4">
+  <div className="flex flex-wrap items-center gap-4">
     <motion.div 
       whileHover={{ scale: 1.05 }}
       className="flex items-center gap-2 group"
@@ -128,15 +143,9 @@ const About = () => {
         dhanish92@gmail.com
       </span>
     </motion.a>
-  </div>
-
-  {/* Email + Socials in one row */}
-  <div className="flex flex-wrap justify-center items-center gap-4">
-
-
-    {/* Social Icons */}
-    <div className="flex gap-3">
-      <motion.a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+     {/* Social Icons */}
+    <div className="flex">
+      <motion.a href="https://linkedin.com/in/dhanishs" target="_blank" rel="noopener noreferrer"
         whileHover={{ scale: 1.2, rotate: 5 }}
         className={`p-3 rounded-full transition-all duration-300 ${
           theme === 'dark' ? 'text-gray-50 hover:text-blue-400 hover:bg-blue-400/10' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-600/10'
@@ -145,7 +154,7 @@ const About = () => {
         <Linkedin size={24} />
       </motion.a>
 
-      <motion.a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"
+      <motion.a href="http://github.com/Sdhanish/" target="_blank" rel="noopener noreferrer"
         whileHover={{ scale: 1.2, rotate: -5 }}
         className={`p-3 rounded-full transition-all duration-300 ${
           theme === 'dark' ? 'text-gray-50 hover:text-gray-200 hover:bg-gray-200/10' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-900/10'
@@ -154,7 +163,7 @@ const About = () => {
         <Github size={24} />
       </motion.a>
 
-      <motion.a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"
+      <motion.a href="https://www.instagram.com/sdhanish_/" target="_blank" rel="noopener noreferrer"
         whileHover={{ scale: 1.2, rotate: 5 }}
         className={`p-3 rounded-full transition-all duration-300 ${
           theme === 'dark' ? 'text-gray-50 hover:text-pink-400 hover:bg-pink-400/10' : 'text-gray-600 hover:text-pink-600 hover:bg-pink-600/10'
@@ -163,7 +172,7 @@ const About = () => {
         <Instagram size={24} />
       </motion.a>
 
-      <motion.a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"
+      <motion.a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
         whileHover={{ scale: 1.2, rotate: -5 }}
         className={`p-3 rounded-full transition-all duration-300 ${
           theme === 'dark' ? 'text-gray-50 hover:text-blue-500 hover:bg-blue-500/10' : 'text-gray-600 hover:text-blue-700 hover:bg-blue-700/10'
@@ -172,6 +181,13 @@ const About = () => {
         <Facebook size={24} />
       </motion.a>
     </div>
+  </div>
+
+  {/* Email + Socials in one row */}
+  <div className="flex flex-wrap justify-center items-center gap-1">
+
+
+   
   </div>
 </motion.div>
 

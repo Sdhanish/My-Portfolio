@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Linkedin, Github, Send, Instagram, Facebook } from
 import { motion } from "framer-motion";
 import { Toaster } from 'react-hot-toast';
 import ContactForm from './contact/contact-form';
+import WhatsAppChatLink from './whatspp/whatsapp-chat-link';
 
 
 const Contact: React.FC = () => {
@@ -71,7 +72,7 @@ const socialLinks = [
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               {contactInfo.map((info, index) => (
                 <a
                   key={info.label}
@@ -90,60 +91,53 @@ const socialLinks = [
             </div>
 
             {/* Social Links */}
-           <div className="pt-3">
-  <p className="text-gray-900 dark:text-white font-medium mb-3 text-sm">
-    Follow me on:
-  </p>
-  <div className="flex gap-3">
-    <motion.a
-      href="https://linkedin.com/in/yourprofile"
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.2, rotate: 5 }}
-      className="p-3 rounded-full transition-all duration-300 
-                 text-gray-600 hover:text-blue-600 hover:bg-blue-600/10 
-                 dark:text-gray-50 dark:hover:text-blue-400 dark:hover:bg-blue-400/10"
-    >
-      <Linkedin size={20} />
-    </motion.a>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+  <WhatsAppChatLink />
 
-    <motion.a
-      href="https://github.com/yourusername"
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.2, rotate: -5 }}
-      className="p-3 rounded-full transition-all duration-300 
-                 text-gray-600 hover:text-gray-900 hover:bg-gray-900/10 
-                 dark:text-gray-50 dark:hover:text-gray-200 dark:hover:bg-gray-200/10"
-    >
-      <Github size={20} />
-    </motion.a>
+  <div className="flex flex-col md:flex-row items-center gap-3">
+    <p className="text-gray-900 dark:text-white font-medium text-sm">
+      Follow me on:
+    </p>
+    <div className="flex">
+      {/* Social icons */}
+      <motion.a href="https://linkedin.com/in/dhanishs" target="_blank" rel="noopener noreferrer"
+        whileHover={{ scale: 1.2, rotate: 5 }}
+        className="p-3 rounded-full transition-all duration-300 
+                   text-gray-600 hover:text-blue-600 hover:bg-blue-600/10 
+                   dark:text-gray-50 dark:hover:text-blue-400 dark:hover:bg-blue-400/10">
+        <Linkedin size={20} />
+      </motion.a>
 
-    <motion.a
-      href="https://instagram.com/yourprofile"
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.2, rotate: 5 }}
-      className="p-3 rounded-full transition-all duration-300 
-                 text-gray-600 hover:text-pink-600 hover:bg-pink-600/10 
-                 dark:text-gray-50 dark:hover:text-pink-400 dark:hover:bg-pink-400/10"
-    >
-      <Instagram size={20} />
-    </motion.a>
+      <motion.a href="http://github.com/Sdhanish/" target="_blank" rel="noopener noreferrer"
+        whileHover={{ scale: 1.2, rotate: -5 }}
+        className="p-3 rounded-full transition-all duration-300 
+                   text-gray-600 hover:text-gray-900 hover:bg-gray-900/10 
+                   dark:text-gray-50 dark:hover:text-gray-200 dark:hover:bg-gray-200/10">
+        <Github size={20} />
+      </motion.a>
 
-    <motion.a
-      href="https://facebook.com/yourprofile"
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.2, rotate: -5 }}
-      className="p-3 rounded-full transition-all duration-300 
-                 text-gray-600 hover:text-blue-700 hover:bg-blue-700/10 
-                 dark:text-gray-50 dark:hover:text-blue-500 dark:hover:bg-blue-500/10"
-    >
-      <Facebook size={20} />
-    </motion.a>
+      <motion.a href="https://www.instagram.com/sdhanish_/" target="_blank" rel="noopener noreferrer"
+        whileHover={{ scale: 1.2, rotate: 5 }}
+        className="p-3 rounded-full transition-all duration-300 
+                   text-gray-600 hover:text-pink-600 hover:bg-pink-600/10 
+                   dark:text-gray-50 dark:hover:text-pink-400 dark:hover:bg-pink-400/10">
+        <Instagram size={20} />
+      </motion.a>
+
+      <motion.a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
+        whileHover={{ scale: 1.2, rotate: -5 }}
+        className="p-3 rounded-full transition-all duration-300 
+                   text-gray-600 hover:text-blue-700 hover:bg-blue-700/10 
+                   dark:text-gray-50 dark:hover:text-blue-500 dark:hover:bg-blue-500/10">
+        <Facebook size={20} />
+      </motion.a>
+    </div>
   </div>
 </div>
+
+          
+
+
           </div>
 
           {/* Contact Form */}

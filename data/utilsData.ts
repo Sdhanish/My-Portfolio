@@ -9,6 +9,8 @@ export const navItems = [
 ];
 
 
+
+
 // hero
 
 export  const titles = [
