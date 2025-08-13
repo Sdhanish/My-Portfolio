@@ -38,7 +38,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative flex justify-center "
         >
-        <div className="relative w-30 h-30 animate-pulse">
+        <div className="relative w-30 h-30">
   {/* Logo with circular border */}
   <div className="w-full h-full border-4 border-portfolio-primary/30 rounded-full p-4 flex items-center justify-center bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
     <div className="relative w-[80px] sm:w-[120px] h-[80px] sm:h-[120px]">
