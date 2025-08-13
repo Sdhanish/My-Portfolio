@@ -72,7 +72,7 @@ const Header = () => {
   if (!mounted) {
     return (
       <>
-        <header className="fixed top-0 left-0 w-full z-50 py-4 bg-transparent" />
+        <header className="fixed top-0 left-0 w-full z-50 md:py-4 bg-transparent" />
         <nav className="md:hidden fixed bottom-4 left-4 right-4 z-50 h-16 bg-transparent" />
       </>
     );
@@ -81,17 +81,18 @@ const Header = () => {
   return (
     <>
       {/* Header (Desktop & Mobile) */}
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4
-          ${
-            isScrolled
-              ? 'bg-white/30 dark:bg-neutral-900/30 backdrop-blur-lg shadow-lg'
-              : 'bg-white/20 dark:bg-neutral-900/10 backdrop-blur-md'
-          }`}
-      >
+     <motion.header
+  initial={{ y: -100 }}
+  animate={{ y: 0 }}
+  transition={{ duration: 0.5, ease: 'easeOut' }}
+  className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 md:py-3 
+    ${
+      isScrolled
+        ? 'bg-white/30 dark:bg-neutral-900/30 backdrop-blur-lg shadow-lg'
+        : 'bg-transparent'
+    }`}
+>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo */}
@@ -128,7 +129,7 @@ const Header = () => {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className={`relative font-medium px-3 py-1 transition-colors duration-300 group
+                  className={`relative font-medium px-3 transition-colors duration-300 group
                     ${
                       activeSection === item.href
                         ? 'text-portfolio-primary'
@@ -146,11 +147,9 @@ const Header = () => {
                   ></span>
                 </Link>
               ))}
-              <ModeToggle />
+             
             </nav>
-
-            {/* Mobile Theme Toggle - Only visible on mobile */}
-            <div className="md:hidden">
+            <div>
               <ModeToggle />
             </div>
           </div>
@@ -195,9 +194,6 @@ const Header = () => {
           })}
         </div>
       </motion.nav>
-
-      {/* Mobile Bottom Padding to prevent content overlap */}
-      <div className="md:hidden h-20" />
     </>
   );
 };

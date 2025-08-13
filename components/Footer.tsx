@@ -21,7 +21,7 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 text-white py-10 transition-colors duration-300">
+    <footer className="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 text-white pt-10 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Logo and Description */}
@@ -83,25 +83,36 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 dark:border-gray-600 mt-8 pt-6 transition-colors duration-300">
+        <div className="border-t border-gray-700 dark:border-gray-600 mt-8 transition-colors duration-300">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
             {/* Centered Copyright */}
-            <div className="flex-1 flex justify-center">
-              <div className="flex items-center space-x-2 text-gray-300 dark:text-gray-400 text-sm">
-                <span>© {new Date().getFullYear()}Dhanish S. Made with</span>
-                <div className="animate-pulse">
-                  <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
-                </div>
-                <span>sdhanish92@gmail.com</span>
-              </div>
-            </div>
+            <div className="flex-1">
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center text-center sm:space-x-4 space-y-2 sm:space-y-0 text-gray-300 dark:text-gray-400 text-xs sm:text-sm">
+    
+    {/* First row - Year + Name */}
+    <div className="flex justify-center items-center">
+      <span>© {new Date().getFullYear()} Dhanish S</span>
+    </div>
+
+    {/* Second row - Made with love + Email */}
+    <div className="flex flex-wrap justify-center items-center space-x-2">
+      <span>Made with</span>
+      <div className="animate-pulse">
+        <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
+      </div>
+      <span className="truncate">sdhanish92@gmail.com</span>
+    </div>
+
+  </div>
+</div>
+
 
             {/* Minimal Scroll to Top */}
             <button
               onClick={scrollToTop}
-              className="w-10 h-10 bg-gradient-to-r from-blue-300 to-blue-600 rounded-md flex items-center justify-center text-white text-sm font-medium hover:shadow-lg dark:hover:shadow-blue-500/25 transition-all duration-300 hover:scale-110 active:scale-95"
+              className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-500 rounded-md hidden items-center justify-center text-white text-sm font-medium hover:shadow-lg dark:hover:shadow-blue-500/25 transition-all duration-300 hover:scale-110 active:scale-95 md:flex"
             >
-             <ArrowUp className="w-4 h-4" />
+             <ArrowUp className="w-4 h-4 hidden md:inline-flex" />
             </button>
           </div>
         </div>

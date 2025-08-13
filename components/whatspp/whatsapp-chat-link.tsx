@@ -8,9 +8,13 @@ const WhatsAppChatLink = () => {
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ scale: 1.05 }}
-      className="inline-flex items-center px-3 py-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 space-x-2 "
-    >
-      <FaWhatsapp size={24} />
+      className="flex items-center gap-2"
+    > 
+    
+    <div  className="inline-flex items-center px-3 py-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 space-x-2">
+ <FaWhatsapp size={24} />
+    </div>
+     
       <span>Chat on WhatsApp</span>
     </motion.a>
   );

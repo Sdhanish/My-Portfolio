@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+import { techIcons } from '@/data/utilsData';
 
 interface Project {
   title: string;
@@ -71,19 +72,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, techColors, index = 
         <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{project.description}</p>
 
         {/* Tech Stack */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {project.tech.map((tech) => {
-            const colorClasses = techColors[tech] || 'bg-gray-300 text-gray-800';
-            return (
-              <span
-                key={tech}
-                className={`px-3 py-1 font-medium text-sm rounded-full ${colorClasses}`}
-              >
-                {tech}
-              </span>
-            );
-          })}
-        </div>
+      <div className="flex flex-wrap gap-2 mb-6 space-x-3">
+  {project.tech.map((tech) => {
+    const techData = techIcons[tech];
+    if (!techData) return null;
+    const Icon = techData.icon;
+    return (
+      <div key={tech}>
+        <Icon className="w-5 h-5" style={{ color: techData.color }} />
+        {/* <span className="text-sm font-medium">{tech}</span> */}
+      </div>
+    );
+  })}
+</div>
       </div>
     </motion.div>
   );

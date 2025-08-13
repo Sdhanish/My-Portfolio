@@ -30,7 +30,12 @@ export  const titles = [
 import {
   SiReact, SiNextdotjs, SiTypescript, SiRedux, SiTailwindcss, SiHtml5, SiCss3,
   SiNodedotjs, SiExpress, SiMongodb, SiFirebase, SiMysql, SiJavascript,
-  SiPython, SiPhp, SiGit, SiPostman,
+  SiPython, SiPhp, SiGit, SiPostman,SiVercel,
+  SiRender,
+  SiPostgresql,
+  SiSupabase,
+  SiClerk,
+  SiStripe
 } from 'react-icons/si';
 
 export type Technology = {
@@ -90,7 +95,13 @@ export const sideBySideCategories: Category[][] = [
       title: 'Tools & Platforms',
       technologies: [
         { name: 'Git', icon: SiGit, color: '#F05032' },
-        { name: 'Postman', icon: SiPostman, color: '#FF6C37' }
+        { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
+        { name: 'Vercel', icon: SiVercel,  color: '#111111' },
+        { 
+    name: 'Render', 
+    icon: SiRender, 
+    color: '#111111'
+  }
       ]
     }
   ]
@@ -109,7 +120,7 @@ export const skills = [
     {
       title: 'Yoga Connect',
       description: 'A comprehensive yoga platform connecting instructors with students. Features include class booking, progress tracking, and community interactions.',
-      tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Firebase'],
+      tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Firebase','Vercel','Render'],
       image: '/works/yoga.png',
       github: 'https://github.com/Sdhanish/Yoga-Connect',
       demo: 'https://yoga-frontend-three.vercel.app/',
@@ -119,7 +130,7 @@ export const skills = [
     {
       title: 'Smartfin AI',
       description: 'AI-powered financial management application that provides intelligent insights, budget recommendations, and predictive analytics for personal finance.',
-      tech: ['Next.js', 'Supabase', 'Clerk', 'Inngest', 'Arcjet'],
+      tech: ['Next.js', 'Supabase', 'Clerk', 'Inngest', 'Arcjet','Vercel'],
       image: '/works/finance.png',
       github: 'https://github.com/Sdhanish/SmartFin-AI',
       demo: 'https://smart-fin-ai.vercel.app/',
@@ -129,7 +140,7 @@ export const skills = [
     {
       title: 'Notes Application',
       description: 'Full stack notes management app in MERN Stack for skill enhancement',
-      tech:  ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
+      tech:  ['React.js', 'Node.js', 'MongoDB', 'Express.js' ,'Vercel'],
       image: '/works/notes.png',
       github: 'https://github.com/Sdhanish/notes-app',
       demo: 'https://notes-app-nc54.onrender.com/',
@@ -139,19 +150,42 @@ export const skills = [
   ];
 
 
-  export const techColors: Record<string, string> = {
-  'React.js': 'bg-[#61DBFB]/10 text-[#61DBFB]', // React blue
-  'Next.js': 'bg-gray-400 text-white', // Next.js black/white
-  'Node.js': 'bg-[#68A063]/10 text-[#68A063]', // Node green
-  'Express.js': 'bg-green-200 text-green-500', // Express black
-  'MongoDB': 'bg-[#4DB33D]/10 text-[#4DB33D]', // MongoDB green
-  'Firebase': 'bg-[#FFCA28]/10 text-[#FFCA28]', // Firebase yellow
-  'Tailwind CSS': 'bg-[#38B2AC]/10 text-[#38B2AC]', // Tailwind teal
-  'PostgreSQL': 'bg-[#336791]/10 text-[#336791]', // PG blue
-  'Arcjet': 'bg-gray-300 text-black', // Redis red
-  'Supabase': 'bg-[#0db7ed]/10 text-[#0db7ed]', // Docker blue
-  'Clerk': 'bg-violet-200 text-violet-600 ',
-  'Stripe': 'bg-[#635BFF]/10 text-[#635BFF]', // Stripe purple
+export const techColors: Record<string, string> = {
+  'React.js': 'bg-[#a8eaff] text-black',      // Lighter React blue
+  'Next.js': 'bg-[#2d2d2d] text-white',       // Softer black/charcoal
+  'Node.js': 'bg-[#6cc96c] text-black',       // Softer Node green
+  'Express.js': 'bg-[#4d4d4d] text-black',    // Softer black/charcoal
+  'MongoDB': 'bg-[#7fd87a] text-black',       // Lighter Mongo green
+  'Firebase': 'bg-[#ffe480] text-black',      // Softer yellow
+  'Tailwind CSS': 'bg-[#7fd5d1] text-black',  // Lighter Tailwind teal
+  'PostgreSQL': 'bg-[#6d8bb8] text-black',    // Softer blue
+  'Arcjet': 'bg-[#b0b0b0] text-black',        // Softer gray
+  'Supabase': 'bg-[#7fe6bb] text-black',      // Lighter Supabase green
+  'Clerk': 'bg-[#a48bd8] text-black',         // Softer purple
+  'Stripe': 'bg-[#9a93ff] text-black',        // Lighter Stripe purple
+  'Render': 'bg-[#8ef3d5] text-black',        // Softer turquoise
+  'Vercel': 'bg-[#2d2d2d] text-black',        // Softer black
+  'Inngest': 'bg-[#2d2d2d] text-white',       // Softer black
+};
+
+
+import { IconType } from 'react-icons';
+
+
+export const techIcons: Record<string, { icon: IconType; color: string }> = {
+  'React.js': { icon: SiReact, color: '#61DBFB' },
+  'Next.js': { icon: SiNextdotjs, color: '#000000' },
+  'Node.js': { icon: SiNodedotjs, color: '#3C873A' },
+  'Express.js': { icon: SiExpress, color: '#6B7280' }, // gray-500
+  'MongoDB': { icon: SiMongodb, color: '#4DB33D' },
+  'Firebase': { icon: SiFirebase, color: '#FFCA28' },
+  'Tailwind CSS': { icon: SiTailwindcss, color: '#38B2AC' },
+  'PostgreSQL': { icon: SiPostgresql, color: '#336791' },
+  'Supabase': { icon: SiSupabase, color: '#3ECF8E' },
+  'Clerk': { icon: SiClerk, color: '#6E59A5' },
+  'Stripe': { icon: SiStripe, color: '#635BFF' },
+  'Render': { icon: SiRender, color: '#46E3B7' },
+  'Vercel': { icon: SiVercel, color: '#000000' },
 };
 
 

@@ -52,8 +52,8 @@ const Education = () => {
                   viewport={{ once: true }}
                   className={`relative flex items-center ${
                     index % 2 === 0
-                      ? 'justify-start sm:justify-start'
-                      : 'justify-end sm:justify-end'
+                      ? 'justify-center sm:justify-start'
+                      : 'justify-center sm:justify-end'
                   } sm:flex-row`}
                 >
                   {/* Circle Icon */}
@@ -66,7 +66,7 @@ const Education = () => {
                         delay: index * 0.2 + 0.3,
                       }}
                       viewport={{ once: true }}
-                      className="w-16 h-16  bg-gradient-to-r from-blue-400 to-blue-600 rounded-full items-center justify-center shadow-lg hidden lg:flex"
+                      className="w-14 h-14  bg-gradient-to-r from-blue-400 to-blue-600 rounded-full items-center justify-center shadow-lg hidden lg:flex"
                     >
                       <Icon className="w-8 h-8 text-white" />
                     </motion.div>

@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { ReactTyped } from "react-typed";
 import { titles } from '@/data/utilsData';
 import { handleDownloadCV, scrollToSection } from '@/utils/utilData';
-import WhatsAppChatLink from './whatspp/whatsapp-chat-link';
 
 
 const Hero = () => {
@@ -37,51 +36,45 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex justify-center mb-8"
+          className="relative flex justify-center "
         >
-          <div className="relative w-30 h-30">
-            {/* Logo with circular border */}
-            <div className="w-full h-full border-4 border-portfolio-primary/30 rounded-full p-4 flex items-center justify-center bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
-              <Image
-                src={theme === 'dark' ? '/dark-logo.png' : '/white-logo.png'}
-                alt="Logo"
-                width={120}
-                height={120}
-                className="rounded-full object-contain h-auto"
-              />
-            </div>
+        <div className="relative w-30 h-30 animate-pulse">
+  {/* Logo with circular border */}
+  <div className="w-full h-full border-4 border-portfolio-primary/30 rounded-full p-4 flex items-center justify-center bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+    <div className="relative w-[80px] sm:w-[120px] h-[80px] sm:h-[120px]">
+      {/* Light logo */}
+      <Image
+        src="/white-logo.png"
+        alt="Logo"
+        fill
+        className="rounded-full object-contain dark:hidden"
+      />
+      {/* Dark logo */}
+      <Image
+        src="/dark-logo.png"
+        alt="Logo"
+        fill
+        className="rounded-full object-contain hidden dark:block"
+      />
+    </div>
+  </div>
 
-            {/* React Icon - Top Right */}
-            {/* <motion.div
-              animate={{ y: [-8, 8, -8] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-2 -right-2 w-12 h-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg flex items-center justify-center border-2 border-blue-400"
-            >
-              <Image
-                src="/hero-section/react.png"
-                alt="react Logo"
-                width={40}
-                height={40}
-                className="object-cover rounded-full"
-              />
-            </motion.div> */}
+  {/* Node.js Icon - Bottom Left */}
+  {/* <motion.div
+    animate={{ y: [8, -8, 8] }}
+    transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+    className="absolute -bottom-2 -left-2 w-12 h-14 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center border-2 border-yellow-500 sm:w-[60px]"
+  >
+    <Image
+      src="/hero-section/JavaScript-Symbol.png"
+      alt="js Logo"
+      width={60}
+      height={60}
+      className="object-contain rounded-full w-[40px] sm:w-[60px]"
+    />
+  </motion.div> */}
+</div>
 
-            {/* Node.js Icon - Bottom Left */}
-            <motion.div
-              animate={{ y: [8, -8, 8] }}
-              transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-2 -left-2 w-12 h-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg flex items-center justify-center border-2 border-yellow-500"
-            >
-              <Image
-               
-                src="/hero-section/JavaScript-Symbol.png"
-                alt="js Logo"
-                width={60}
-                height={60}
-                className="object-contain rounded-full"
-              />
-            </motion.div>
-          </div>
         </motion.div>
 
         {/* Text Section */}
