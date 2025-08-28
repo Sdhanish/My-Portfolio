@@ -24,7 +24,7 @@ const TechStack: React.FC<{ theme?: 'light' | 'dark' }> = ({ theme = 'light' }) 
           <h2
             className={`text-3xl sm:text-4xl font-bold mb-4 dark:text-gray-300`}
           >
-            Tech Stack & Skills
+            🌐Tech Stack & Skills
           </h2>
           <div className="w-20 h-1  bg-gradient-to-r from-blue-300 to-blue-600 mx-auto rounded-full"></div>
         </motion.div>

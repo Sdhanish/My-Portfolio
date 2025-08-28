@@ -50,7 +50,7 @@ const socialLinks = [
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3">
-            Get In Touch
+            📞Get In Touch
           </h2>
           <div className="w-16 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 mx-auto rounded"></div>
           <p className="text-base text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto leading-relaxed">

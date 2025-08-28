@@ -34,7 +34,7 @@ const Works = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-           My Works 🖊️
+          💻My Works 
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-600 dark:from-blue-400 dark:to-blue-400 mx-auto rounded"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">

@@ -127,7 +127,7 @@ const Services: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-            Services I Offer
+            🧾Services I Offer
           </h2>
           <div className="w-20 h-1  bg-gradient-to-r from-blue-300 to-blue-600 mx-auto rounded-full"></div>
           <p className="text-lg mt-6 max-w-3xl mx-auto text-gray-600 dark:text-gray-300">

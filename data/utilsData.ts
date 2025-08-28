@@ -115,39 +115,75 @@ export const skills = [
 ];
 
 
+
 // works data
-  export const projects = [
+export const projects = [
+  {
+    title: 'Yoga Connect',
+    description:
+      'A comprehensive yoga platform connecting instructors with students. Features include class booking, progress tracking, and community interactions.',
+    tech: [
+      'React.js',
+      'Node.js',
+      'MongoDB',
+      'Express.js',
+      'Firebase',
+      'Vercel',
+      'Render',
+      'Stripe'
+    ],
+    image: '/works/yoga.png',
+    github: 'https://github.com/Sdhanish/Yoga-Connect',
+    demo: 'https://yoga-frontend-three.vercel.app/',
+    category: 'Full Stack MERN Project',
+    emoji: '🧘',
+  },
+  {
+    title: 'Smartfin AI',
+    description:
+      'AI-powered financial management application that provides intelligent insights, budget recommendations, and predictive analytics for personal finance.',
+    tech: ['Next.js', 'Supabase', 'Clerk', 'Inngest', 'Arcjet', 'Vercel'],
+    image: '/works/finance.png',
+    github: 'https://github.com/Sdhanish/SmartFin-AI',
+    demo: 'https://smart-fin-ai.vercel.app/',
+    category: 'Full Stack Next Js Project',
+    emoji: '🤖',
+  },
     {
-      title: 'Yoga Connect',
-      description: 'A comprehensive yoga platform connecting instructors with students. Features include class booking, progress tracking, and community interactions.',
-      tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Firebase','Vercel','Render'],
-      image: '/works/yoga.png',
-      github: 'https://github.com/Sdhanish/Yoga-Connect',
-      demo: 'https://yoga-frontend-three.vercel.app/',
-      category: 'Full Stack MERN Project',
-      emoji: '🧘'
-    },
-    {
-      title: 'Smartfin AI',
-      description: 'AI-powered financial management application that provides intelligent insights, budget recommendations, and predictive analytics for personal finance.',
-      tech: ['Next.js', 'Supabase', 'Clerk', 'Inngest', 'Arcjet','Vercel'],
-      image: '/works/finance.png',
-      github: 'https://github.com/Sdhanish/SmartFin-AI',
-      demo: 'https://smart-fin-ai.vercel.app/',
-      category: 'Full Stack Next Js Project',
-      emoji: '🤖'
-    },
-    {
-      title: 'Notes Application',
-      description: 'Full stack notes management app in MERN Stack for skill enhancement',
-      tech:  ['React.js', 'Node.js', 'MongoDB', 'Express.js' ,'Vercel'],
-      image: '/works/notes.png',
-      github: 'https://github.com/Sdhanish/notes-app',
-      demo: 'https://notes-app-nc54.onrender.com/',
-      category: 'Full Stack',
-      emoji: '📋'
-    }
-  ];
+    title: 'BookMyBite',
+    description:
+      'A food booking app where users can browse dishes, add items to cart, and make payments individually or for all selected items. Complete MERN stack project with authentication and smooth checkout flow.',
+    tech: [
+      'React.js',
+      'Node.js',
+      'MongoDB',
+      'Express.js',
+      'TanStack Query',
+      'JWT Authentication',
+      'Vercel',
+      'Render',
+      'Stripe'
+    ],
+    image: '/works/bookmybite.png',
+    github: 'https://github.com/Sdhanish/BookMyBite', 
+    demo: 'https://book-my-bite-zeta.vercel.app/', 
+    category: 'Full Stack MERN Project',
+    emoji: '🍔',
+  },
+  {
+    title: 'Notes Application',
+    description:
+      'Full stack notes management app in MERN Stack for skill enhancement',
+    tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Vercel'],
+    image: '/works/notes.png',
+    github: 'https://github.com/Sdhanish/notes-app',
+    demo: 'https://notes-app-nc54.onrender.com/',
+    category: 'Full Stack',
+    emoji: '📋',
+  },
+
+];
+
 
 
 export const techColors: Record<string, string> = {
