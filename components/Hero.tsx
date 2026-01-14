@@ -22,13 +22,13 @@ const Hero = () => {
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 ">
-        <Image
+        {/* <Image
           src="/hero-section/hero-bg-image.png"
           alt="Background"
           fill
           className="object-cover opacity-50  dark:opacity-100"
           priority
-        />
+        /> */}
        <div
   className="
     absolute inset-0 

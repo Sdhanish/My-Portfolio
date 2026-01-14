@@ -6,8 +6,6 @@ import Image from 'next/image';
 import { MapPin, Phone, Mail, Linkedin, Github, Instagram, Facebook, Download, MessageCircle } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { handleDownloadCV } from '@/utils/utilData';
-import WhatsAppButton from './whatspp/whatsapp';
-import WhatsAppChatLink from './whatspp/whatsapp-chat-link';
 
 const About = () => {
   const { theme } = useTheme();
@@ -40,7 +38,7 @@ const About = () => {
 >
   <div className="relative h-auto">
     <Image
-      src="/about-section/dhanishs.png" // transparent PNG
+      src="/about-section/dhanish.png" // transparent PNG
       alt="Dhanish S"
       width={400}
       height={400}
