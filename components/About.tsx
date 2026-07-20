@@ -27,7 +27,7 @@ const About = () => {
           <div className="w-28 h-1  bg-gradient-to-br from-blue-300 to-blue-600 mx-auto rounded"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center md:w-3/4 mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center md:w-3/4 mx-auto gap-20 mt-12">
         {/* Photo */}
 <motion.div
   initial={{ opacity: 0, x: -50 }}
@@ -36,12 +36,12 @@ const About = () => {
   viewport={{ once: true }}
   className="relative flex justify-center items-center"
 >
-  <div className="relative h-auto">
+  <div className="relative h-0 w-0 sm:h-96 sm:w-96 md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]">
     <Image
       src="/about-section/about (3).png" // transparent PNG
       alt="Dhanish S"
       width={400}
-      height={400}
+      height={800}
       className="object-contain rounded-2xl"
       priority
     />

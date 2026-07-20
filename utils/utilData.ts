@@ -17,8 +17,8 @@ export function scrollToSection(href: string) {
 
 export function handleDownloadCV() {
   const link = document.createElement("a");
-  link.href = "/resume/Dhanish_S_Full_Stack_Developer.pdf";
-  link.download = "Dhanish_S_Full_Stack_Developer.pdf";
+  link.href = "/resume/Dhanish_S_Full_Stack_Developer_Resume.pdf";
+  link.download = "Dhanish_S_Full_Stack_Developer_Resume.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
