@@ -38,7 +38,7 @@ const About = () => {
 >
   <div className="relative h-auto">
     <Image
-      src="/about-section/dhanish.png" // transparent PNG
+      src="/about-section/about (3).png" // transparent PNG
       alt="Dhanish S"
       width={400}
       height={400}
