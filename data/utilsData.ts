@@ -191,7 +191,7 @@ export const projects = [
       'Vercel',
       'Render',
     ],
-    image: '/works/7lenz.png',
+    image: '/works/image.png',
     github: 'https://github.com/Sdhanish/7-lenz-weddplanner-test-host-1',
     demo: 'https://seven-lenz-weddplanner-test-host-1.onrender.com/',
     category: 'Frontend UI/UX Project',
