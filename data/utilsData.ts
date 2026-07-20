@@ -121,7 +121,7 @@ export const projects = [
   {
     title: 'Yoga Connect',
     description:
-      'A comprehensive yoga platform connecting instructors with students. Features include class booking, progress tracking, and community interactions.',
+      'A comprehensive yoga platform connecting instructors with students. Features include class booking, progress tracking, community interactions, secure authentication, and online payments.',
     tech: [
       'React.js',
       'Node.js',
@@ -130,7 +130,7 @@ export const projects = [
       'Firebase',
       'Vercel',
       'Render',
-      'Stripe'
+      'Stripe',
     ],
     image: '/works/yoga.png',
     github: 'https://github.com/Sdhanish/Yoga-Connect',
@@ -138,21 +138,30 @@ export const projects = [
     category: 'Full Stack MERN Project',
     emoji: '🧘',
   },
+
   {
-    title: 'Smartfin AI',
+    title: 'SmartFin AI',
     description:
-      'AI-powered financial management application that provides intelligent insights, budget recommendations, and predictive analytics for personal finance.',
-    tech: ['Next.js', 'Supabase', 'Clerk', 'Inngest', 'Arcjet', 'Vercel'],
+      'An AI-powered personal finance platform featuring intelligent budgeting, expense tracking, authentication, and modern financial insights built with Next.js.',
+    tech: [
+      'Next.js',
+      'Supabase',
+      'Clerk',
+      'Inngest',
+      'Arcjet',
+      'Vercel',
+    ],
     image: '/works/finance.png',
     github: 'https://github.com/Sdhanish/SmartFin-AI',
     demo: 'https://smart-fin-ai.vercel.app/',
-    category: 'Full Stack Next Js Project',
+    category: 'Full Stack Next.js Project',
     emoji: '🤖',
   },
-    {
+
+  {
     title: 'BookMyBite',
     description:
-      'A food booking app where users can browse dishes, add items to cart, and make payments individually or for all selected items. Complete MERN stack project with authentication and smooth checkout flow.',
+      'A full-stack food ordering platform where users can browse meals, manage carts, authenticate securely, and complete payments through a seamless checkout experience.',
     tech: [
       'React.js',
       'Node.js',
@@ -162,26 +171,49 @@ export const projects = [
       'JWT Authentication',
       'Vercel',
       'Render',
-      'Stripe'
+      'Stripe',
     ],
     image: '/works/bookmybite.png',
-    github: 'https://github.com/Sdhanish/BookMyBite', 
-    demo: 'https://book-my-bite-zeta.vercel.app/', 
+    github: 'https://github.com/Sdhanish/BookMyBite',
+    demo: 'https://book-my-bite-zeta.vercel.app/',
     category: 'Full Stack MERN Project',
     emoji: '🍔',
   },
+
   {
-    title: 'Notes Application',
+    title: '7 Lenz Wedding Studio',
     description:
-      'Full stack notes management app in MERN Stack for skill enhancement',
-    tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Vercel'],
-    image: '/works/notes.png',
-    github: 'https://github.com/Sdhanish/notes-app',
-    demo: 'https://notes-app-nc54.onrender.com/',
-    category: 'Full Stack',
-    emoji: '📋',
+      'A premium luxury wedding studio website featuring cinematic storytelling, immersive animations, elegant UI, responsive layouts, and a modern user experience for showcasing wedding photography and films.',
+    tech: [
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Vercel',
+      'Render',
+    ],
+    image: '/works/7lenz.png',
+    github: 'https://github.com/Sdhanish/7-lenz-weddplanner-test-host-1',
+    demo: 'https://seven-lenz-weddplanner-test-host-1.onrender.com/',
+    category: 'Frontend UI/UX Project',
+    emoji: '📸',
   },
 
+  {
+    title: 'College Website',
+    description:
+      'A modern, responsive college website created to demonstrate frontend development, responsive design, UI/UX principles, animations, and clean component architecture.',
+    tech: [
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Vercel',
+    ],
+    image: '/works/college.png',
+    github: 'https://github.com/Sdhanish/college-test-website',
+    demo: 'https://college-test-website.vercel.app/',
+    category: 'Frontend Design Project',
+    emoji: '🎓',
+  },
 ];
 
 
